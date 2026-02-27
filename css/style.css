@@ -445,26 +445,59 @@ footer {
 
 /* ===== ANCIENT TEMPLE STYLE ===== */
 
+/* ===== SACRED PATH – LUXURY STYLE ===== */
+
 .healer-benefits-ancient {
-    background: 
-        linear-gradient(rgba(20,10,0,0.85), rgba(10,5,0,0.9)),
-        url("images/ancient-texture.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 70px 0;
-    color: #f5e6c8;
+    background: linear-gradient(135deg, #062f35, #083c46);
+    padding: 90px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.ancient-box {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px;
-    background: rgba(0,0,0,0.6);
-    border: 1px solid #c6a75e;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(198,167,94,0.3);
+.healer-benefits-ancient::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212,175,55,0.25), transparent);
+    top: -100px;
+    left: -100px;
+    z-index: 0;
 }
+
+.healer-benefits-ancient::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212,175,55,0.15), transparent);
+    bottom: -120px;
+    right: -120px;
+    z-index: 0;
+}
+
+.healer-benefits-ancient .section-title {
+    color: #f6e27a;
+    position: relative;
+    z-index: 1;
+}
+
+/* Inner Card */
+
+.ancient-box {
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding: 50px 40px;
+    background: linear-gradient(145deg, #0f5e63, #083c46);
+    border-radius: 25px;
+    border: 1px solid rgba(212,175,55,0.4);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Benefits List */
 
 .benefit-list {
     list-style: none;
@@ -473,9 +506,32 @@ footer {
 
 .benefit-list li {
     font-size: 20px;
-    margin: 18px 0;
-    letter-spacing: 1px;
+    margin: 22px 0;
+    color: #ffffff;
+    position: relative;
+    padding-left: 35px;
+    transition: 0.3s;
 }
+
+/* Gold glowing bullet */
+
+.benefit-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #f6e27a;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(212,175,55,0.8);
+}
+
+/* Hover effect */
+
+.benefit-list li:hover {
+    transform: translateX(8px);
+    color: #f6e27a;
+}
+
+
 /* ===== YOUTUBE SECTION ===== */
 .video-grid {
     display: grid;
